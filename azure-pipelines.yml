@@ -22,7 +22,8 @@ steps:
 #    targetPath: $(Build.ArtifactStagingDirectory)
 -  script: dotnet publish --output $(Build.ArtifactStagingDirectory)    
 - task: PublishBuildArtifacts@1
-
+    pathtoPublish: $(Build.ArtifactStagingDirectory)
+    
 #- task: PublishBuildArtifacts@1    
 #  displayName: 'Publish Artifact: drop'
 #  inputs:
